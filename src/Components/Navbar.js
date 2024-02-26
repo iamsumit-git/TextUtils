@@ -24,7 +24,7 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">
+              <Link className="nav-link " aria-current="page" to="/">
                 Home
               </Link>
             </li>
@@ -34,6 +34,7 @@ export default function Navbar(props) {
               </Link>
             </li>
           </ul>
+       
           <div className={`form-check form-switch text-${props.mode === 'light'?'dark':'light'} ms-auto`}>
             <input
               class="form-check-input"
@@ -43,7 +44,7 @@ export default function Navbar(props) {
               onClick={props.toggleMode}
             />
             <label class="form-check-label" for="flexSwitchCheckDefault">
-              Enanble darkmode
+              Enanble {props.mode === 'dark' ? 'light' : 'dark'}mode
             </label>
           </div>
         </div>
